@@ -1,6 +1,7 @@
 using System;
 using System.Text;
 using GiraffeTheLogger.ServiceContract;
+using Newtonsoft.Json;
 using RabbitMQ.Client;
 
 namespace GiraffeTheLogger.Service {
@@ -10,13 +11,15 @@ namespace GiraffeTheLogger.Service {
         public QueueService (IConnection connection) {
             this.connection = connection;
         }
-        public void Enqueue (string message, string queueName) {
+        public void Enqueue (object messageObj, string queueName) {
             using (var channel = connection.CreateModel ()) {
                 channel.QueueDeclare (queue: queueName,
                     durable: true,
                     exclusive: false,
                     autoDelete: false,
                     arguments: null);
+
+                var message = JsonConvert.SerializeObject(messageObj);
 
                 var body = Encoding.UTF8.GetBytes (message);
 
