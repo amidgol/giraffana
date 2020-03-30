@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiraffeTheLogger.WebApi", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiraffeTheLogger.WebApi.Dtos", "GiraffeTheLogger.WebApi.Dtos\GiraffeTheLogger.WebApi.Dtos.csproj", "{DB3CFBFF-3762-4DC2-9E7B-5234DED758B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiraffeTheLogger.Service", "GiraffeTheLogger.Service\GiraffeTheLogger.Service.csproj", "{6E7F57E7-2806-47CB-8192-5A99D927466B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiraffeTheLogger.ServiceContract", "GiraffeTheLogger.ServiceContract\GiraffeTheLogger.ServiceContract.csproj", "{35746521-E91C-4D8B-9F43-7A78B56DF634}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +48,29 @@ Global
 		{DB3CFBFF-3762-4DC2-9E7B-5234DED758B1}.Release|x64.Build.0 = Release|Any CPU
 		{DB3CFBFF-3762-4DC2-9E7B-5234DED758B1}.Release|x86.ActiveCfg = Release|Any CPU
 		{DB3CFBFF-3762-4DC2-9E7B-5234DED758B1}.Release|x86.Build.0 = Release|Any CPU
+		{6E7F57E7-2806-47CB-8192-5A99D927466B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E7F57E7-2806-47CB-8192-5A99D927466B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E7F57E7-2806-47CB-8192-5A99D927466B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6E7F57E7-2806-47CB-8192-5A99D927466B}.Debug|x64.Build.0 = Debug|Any CPU
+		{6E7F57E7-2806-47CB-8192-5A99D927466B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6E7F57E7-2806-47CB-8192-5A99D927466B}.Debug|x86.Build.0 = Debug|Any CPU
+		{6E7F57E7-2806-47CB-8192-5A99D927466B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E7F57E7-2806-47CB-8192-5A99D927466B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E7F57E7-2806-47CB-8192-5A99D927466B}.Release|x64.ActiveCfg = Release|Any CPU
+		{6E7F57E7-2806-47CB-8192-5A99D927466B}.Release|x64.Build.0 = Release|Any CPU
+		{6E7F57E7-2806-47CB-8192-5A99D927466B}.Release|x86.ActiveCfg = Release|Any CPU
+		{6E7F57E7-2806-47CB-8192-5A99D927466B}.Release|x86.Build.0 = Release|Any CPU
+		{35746521-E91C-4D8B-9F43-7A78B56DF634}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35746521-E91C-4D8B-9F43-7A78B56DF634}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35746521-E91C-4D8B-9F43-7A78B56DF634}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{35746521-E91C-4D8B-9F43-7A78B56DF634}.Debug|x64.Build.0 = Debug|Any CPU
+		{35746521-E91C-4D8B-9F43-7A78B56DF634}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{35746521-E91C-4D8B-9F43-7A78B56DF634}.Debug|x86.Build.0 = Debug|Any CPU
+		{35746521-E91C-4D8B-9F43-7A78B56DF634}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35746521-E91C-4D8B-9F43-7A78B56DF634}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35746521-E91C-4D8B-9F43-7A78B56DF634}.Release|x64.ActiveCfg = Release|Any CPU
+		{35746521-E91C-4D8B-9F43-7A78B56DF634}.Release|x64.Build.0 = Release|Any CPU
+		{35746521-E91C-4D8B-9F43-7A78B56DF634}.Release|x86.ActiveCfg = Release|Any CPU
+		{35746521-E91C-4D8B-9F43-7A78B56DF634}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
