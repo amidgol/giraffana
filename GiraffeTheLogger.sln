@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiraffeTheLogger.WebApi", "GiraffeTheLogger.WebApi\GiraffeTheLogger.WebApi.csproj", "{961EC596-0B55-499D-8F5A-A3F4141E50F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiraffeTheLogger.WebApi.Dtos", "GiraffeTheLogger.WebApi.Dtos\GiraffeTheLogger.WebApi.Dtos.csproj", "{DB3CFBFF-3762-4DC2-9E7B-5234DED758B1}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiraffeTheLogger.Service", "GiraffeTheLogger.Service\GiraffeTheLogger.Service.csproj", "{6E7F57E7-2806-47CB-8192-5A99D927466B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiraffeTheLogger.ServiceContract", "GiraffeTheLogger.ServiceContract\GiraffeTheLogger.ServiceContract.csproj", "{35746521-E91C-4D8B-9F43-7A78B56DF634}"
@@ -16,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiraffeTheLogger.DbServiceContract", "GiraffeTheLogger.DbServiceContract\GiraffeTheLogger.DbServiceContract.csproj", "{1330D1C7-8AD9-415B-A4FD-16CC2C697DC0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiraffeTheLogger.DbService", "GiraffeTheLogger.DbService\GiraffeTheLogger.DbService.csproj", "{734D7470-FBAC-47C3-B1EA-B722C7A85029}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiraffeTheLogger.Domain", "GiraffeTheLogger.Domain\GiraffeTheLogger.Domain.csproj", "{D9269395-9D37-4AC8-9652-4D7367C45F9B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,18 +42,6 @@ Global
 		{961EC596-0B55-499D-8F5A-A3F4141E50F6}.Release|x64.Build.0 = Release|Any CPU
 		{961EC596-0B55-499D-8F5A-A3F4141E50F6}.Release|x86.ActiveCfg = Release|Any CPU
 		{961EC596-0B55-499D-8F5A-A3F4141E50F6}.Release|x86.Build.0 = Release|Any CPU
-		{DB3CFBFF-3762-4DC2-9E7B-5234DED758B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DB3CFBFF-3762-4DC2-9E7B-5234DED758B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DB3CFBFF-3762-4DC2-9E7B-5234DED758B1}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{DB3CFBFF-3762-4DC2-9E7B-5234DED758B1}.Debug|x64.Build.0 = Debug|Any CPU
-		{DB3CFBFF-3762-4DC2-9E7B-5234DED758B1}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{DB3CFBFF-3762-4DC2-9E7B-5234DED758B1}.Debug|x86.Build.0 = Debug|Any CPU
-		{DB3CFBFF-3762-4DC2-9E7B-5234DED758B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DB3CFBFF-3762-4DC2-9E7B-5234DED758B1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DB3CFBFF-3762-4DC2-9E7B-5234DED758B1}.Release|x64.ActiveCfg = Release|Any CPU
-		{DB3CFBFF-3762-4DC2-9E7B-5234DED758B1}.Release|x64.Build.0 = Release|Any CPU
-		{DB3CFBFF-3762-4DC2-9E7B-5234DED758B1}.Release|x86.ActiveCfg = Release|Any CPU
-		{DB3CFBFF-3762-4DC2-9E7B-5234DED758B1}.Release|x86.Build.0 = Release|Any CPU
 		{6E7F57E7-2806-47CB-8192-5A99D927466B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6E7F57E7-2806-47CB-8192-5A99D927466B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E7F57E7-2806-47CB-8192-5A99D927466B}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -114,5 +102,17 @@ Global
 		{734D7470-FBAC-47C3-B1EA-B722C7A85029}.Release|x64.Build.0 = Release|Any CPU
 		{734D7470-FBAC-47C3-B1EA-B722C7A85029}.Release|x86.ActiveCfg = Release|Any CPU
 		{734D7470-FBAC-47C3-B1EA-B722C7A85029}.Release|x86.Build.0 = Release|Any CPU
+		{D9269395-9D37-4AC8-9652-4D7367C45F9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9269395-9D37-4AC8-9652-4D7367C45F9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9269395-9D37-4AC8-9652-4D7367C45F9B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D9269395-9D37-4AC8-9652-4D7367C45F9B}.Debug|x64.Build.0 = Debug|Any CPU
+		{D9269395-9D37-4AC8-9652-4D7367C45F9B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D9269395-9D37-4AC8-9652-4D7367C45F9B}.Debug|x86.Build.0 = Debug|Any CPU
+		{D9269395-9D37-4AC8-9652-4D7367C45F9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9269395-9D37-4AC8-9652-4D7367C45F9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9269395-9D37-4AC8-9652-4D7367C45F9B}.Release|x64.ActiveCfg = Release|Any CPU
+		{D9269395-9D37-4AC8-9652-4D7367C45F9B}.Release|x64.Build.0 = Release|Any CPU
+		{D9269395-9D37-4AC8-9652-4D7367C45F9B}.Release|x86.ActiveCfg = Release|Any CPU
+		{D9269395-9D37-4AC8-9652-4D7367C45F9B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

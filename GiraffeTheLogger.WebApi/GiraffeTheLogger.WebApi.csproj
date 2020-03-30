@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="../GiraffeTheLogger.Service/GiraffeTheLogger.Service.csproj"/>
-    <ProjectReference Include="../GiraffeTheLogger.WebApi.Dtos/GiraffeTheLogger.WebApi.Dtos.csproj"/>
+    <ProjectReference Include="../GiraffeTheLogger.Domain/GiraffeTheLogger.Domain.csproj"/>
   </ItemGroup>
 
 </Project>

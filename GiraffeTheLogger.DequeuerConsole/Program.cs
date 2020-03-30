@@ -1,5 +1,13 @@
 ﻿using System;
+using System.IO;
 using System.Text;
+using AutoMapper;
+using GiraffeTheLogger.DbService;
+using GiraffeTheLogger.DbServiceContract;
+using GiraffeTheLogger.Domain.Dtos;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
@@ -10,8 +18,18 @@ namespace GiraffeTheLogger.DequeuerConsole {
             if (args.Length != 2) {
                 System.Console.WriteLine ("Add hostName and queueName arguments:\n dotnet run <hostName> <queueName>");
 
-                Environment.Exit(-1);
+                Environment.Exit (-1);
             }
+
+            var builder = new ConfigurationBuilder ()
+                .SetBasePath (Directory
+                    .GetCurrentDirectory ())
+                .AddJsonFile ("appsettings.json");
+
+            IConfigurationRoot config = builder.Build ();
+
+            ServiceProvider serviceProvider = GetServiceProvider (config);
+            var logService = serviceProvider.GetService<ILogService> ();
 
             string hostName = args[0];
             string queueName = args[1];
@@ -27,13 +45,17 @@ namespace GiraffeTheLogger.DequeuerConsole {
 
                 var consumer = new EventingBasicConsumer (channel);
 
-                consumer.Received += (model, ea) => {
+                consumer.Received += async (model, ea) => {
 
                     var body = ea.Body;
 
                     var message = Encoding.UTF8.GetString (body);
 
                     Console.WriteLine ($" Received {message}");
+
+                    var messageDto = JsonConvert.DeserializeObject<MessageDto>(message);
+
+                    await logService.CreateAsync(messageDto);
 
                     channel.BasicAck (deliveryTag: ea.DeliveryTag, multiple: false);
                 };
@@ -44,6 +66,27 @@ namespace GiraffeTheLogger.DequeuerConsole {
 
                 Console.ReadLine ();
             }
+        }
+
+        private static ServiceProvider GetServiceProvider (IConfiguration configuration) {
+            var services = ConfigureServices (configuration);
+            return services.BuildServiceProvider ();
+        }
+        private static IServiceCollection ConfigureServices (IConfiguration configuration) {
+            
+            var elasticUrl = configuration["ElasticUrl"];
+            var elasticDefaultIndex = configuration["ElasticDefaultIndex"];
+
+            IServiceCollection services = new ServiceCollection ();
+
+            services.AddAutoMapper ();
+
+            services.AddScoped<ILogService, LogService> ();
+
+            services.ConfigureElastic(elasticUrl, elasticDefaultIndex);
+
+            return services;
+
         }
     }
 }

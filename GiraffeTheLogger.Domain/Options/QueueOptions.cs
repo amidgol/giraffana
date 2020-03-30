@@ -1,4 +1,4 @@
-namespace GiraffeTheLogger.WebApi.Dtos.Options
+namespace GiraffeTheLogger.Domain.Options
 {
     public class QueueOptions
     {

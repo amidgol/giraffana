@@ -1,7 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
-
+  <ItemGroup>
+    <ProjectReference Include="../GiraffeTheLogger.DbServiceContract/GiraffeTheLogger.DbServiceContract.csproj"/>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NEST" Version="7.6.1"/>
+  </ItemGroup>
 </Project>

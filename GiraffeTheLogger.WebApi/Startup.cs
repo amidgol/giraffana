@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using GiraffeTheLogger.Service;
 using GiraffeTheLogger.ServiceContract;
-using GiraffeTheLogger.WebApi.Dtos.Options;
+using GiraffeTheLogger.Domain.Options;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;

@@ -4,6 +4,13 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <ProjectReference Include="../GiraffeTheLogger.DbService/GiraffeTheLogger.DbService.csproj"/>
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="RabbitMQ.Client" Version="6.0.0-rc1"/>
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="3.1.3"/>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.3"/>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.3"/>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3"/>
   </ItemGroup>
 </Project>
