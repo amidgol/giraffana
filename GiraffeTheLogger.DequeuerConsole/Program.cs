@@ -7,6 +7,12 @@ namespace GiraffeTheLogger.DequeuerConsole {
     class Program {
         static void Main (string[] args) {
 
+            if (args.Length != 2) {
+                System.Console.WriteLine ("Add hostName and queueName arguments:\n dotnet run <hostName> <queueName>");
+
+                Environment.Exit(-1);
+            }
+
             string hostName = args[0];
             string queueName = args[1];
 
@@ -22,9 +28,9 @@ namespace GiraffeTheLogger.DequeuerConsole {
                 var consumer = new EventingBasicConsumer (channel);
 
                 consumer.Received += (model, ea) => {
-                    
+
                     var body = ea.Body;
-                    
+
                     var message = Encoding.UTF8.GetString (body);
 
                     Console.WriteLine ($" Received {message}");
