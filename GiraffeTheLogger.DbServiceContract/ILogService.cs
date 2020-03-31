@@ -1,6 +1,6 @@
 using System;
 using System.Threading.Tasks;
-using GiraffeTheLogger.Domain.Dtos;
+using GiraffeTheLogger.Domain;
 using GiraffeTheLogger.Domain.Entities;
 
 namespace GiraffeTheLogger.DbServiceContract

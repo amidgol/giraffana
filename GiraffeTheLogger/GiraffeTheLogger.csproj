@@ -4,12 +4,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="../GiraffeTheLogger.Domain/GiraffeTheLogger.Domain.csproj"/>
-  </ItemGroup>
-
   <PropertyGroup>
-    <Version>0.1.1</Version>
+    <Version>0.1.0</Version>
   </PropertyGroup>
-  
+
 </Project>

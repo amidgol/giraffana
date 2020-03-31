@@ -1,6 +1,6 @@
 using System;
 using AutoMapper;
-using GiraffeTheLogger.Domain.Dtos;
+using GiraffeTheLogger;
 using GiraffeTheLogger.Domain.Entities;
 using GiraffeTheLogger.Domain.Extensions;
 

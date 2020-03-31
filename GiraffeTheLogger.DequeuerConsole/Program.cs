@@ -4,7 +4,7 @@ using System.Text;
 using AutoMapper;
 using GiraffeTheLogger.DbService;
 using GiraffeTheLogger.DbServiceContract;
-using GiraffeTheLogger.Domain.Dtos;
+using GiraffeTheLogger;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;

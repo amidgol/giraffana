@@ -2,7 +2,7 @@ using System;
 using System.Threading.Tasks;
 using AutoMapper;
 using GiraffeTheLogger.DbServiceContract;
-using GiraffeTheLogger.Domain.Dtos;
+using GiraffeTheLogger.Domain;
 using GiraffeTheLogger.Domain.Entities;
 using Nest;
 
